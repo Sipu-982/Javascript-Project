@@ -29,9 +29,7 @@ export const ContextProvider= ({children})=>{
         email:"sipurana38@gmail.com"
     }
     const toggleTheme= ()=>{
-        SetTheme((themeColor)=>(
-            themeColor==="light"? "dark":"light"
-        ));
+        SetTheme((themeColor)=>(themeColor==="light"? "dark":"light"));
     }
 
     
