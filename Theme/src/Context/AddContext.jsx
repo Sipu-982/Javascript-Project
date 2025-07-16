@@ -40,6 +40,9 @@ export const ContextProvider= ({children})=>{
         return state-1;
 
      }
+     else if(action.type==="Reset"){
+      return state=0;
+     }
   }
   const [count,dispatch]= useReducer(reducer,0);
 

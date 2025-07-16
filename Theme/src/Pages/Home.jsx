@@ -1,5 +1,8 @@
 import React, { useContext} from 'react'
 import { MadeContext } from '../Context/AddContext'
+import { RiResetLeftLine } from "react-icons/ri";
+import { IoAddOutline } from "react-icons/io5";
+import { GrFormSubtract } from "react-icons/gr";
 
 const Home = () => {
     const {theme,Home,userInfo,dispatch}= useContext(MadeContext);
@@ -10,8 +13,9 @@ const Home = () => {
         <h2>{userInfo.fullname}</h2>
         <h2>{userInfo.email}</h2>
         <div className="flex gap-4 mt-4">
-        <button className='text-xl py-1 px-3 rounded-md bg-[#09830f] text-white font-bold' onClick={()=>dispatch({type:"Increment"})}>+</button>
-        <button className='text-xl py-1 px-3 rounded-md bg-[#09830f] text-white font-bold' onClick={()=>dispatch({type:"Decrement"})}>-</button>
+        <button className='text-xl py-2 px-4 rounded-md bg-[#09830f] text-white font-bold' onClick={()=>dispatch({type:"Increment"})}><IoAddOutline size={20}/></button>
+        <button className='text-xl py-2 px-4 rounded-md bg-[#09830f] text-white font-bold' onClick={()=>dispatch({type:"Decrement"})}><GrFormSubtract size={20}/></button>
+        <button className='text-xl py-2 px-4 rounded-md bg-[#09830f] text-white font-bold' onClick={()=>dispatch({type:"Reset"})}><RiResetLeftLine size={20} /></button>
         </div>
     </div>
   )
